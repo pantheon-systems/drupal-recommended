@@ -33,6 +33,7 @@
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
         "composer-exit-on-patch-failure": true,
+        "enable-patching": true,
         "patchLevel": {
             "drupal/core": "-p2"
         },
