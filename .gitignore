@@ -7,6 +7,9 @@
 /web/*
 !/web/*/
 
+# Explicitly re-allow and **file** committed directly at the document root
+#!/web/favicon.ico
+
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
 /web/sites/*/settings.local.php
