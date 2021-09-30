@@ -2,14 +2,6 @@
 # Because .gitignore is specific to your site and its deployment processes, you
 # may need to uncomment, add, or remove rules.
 
-# Ignore scaffold files placed directly at the document root
-# (/web/*), but allow any directories at the document root (!/web/*/).
-/web/*
-!/web/*/
-
-# Explicitly re-allow and **file** committed directly at the document root
-#!/web/favicon.ico
-
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
 /web/sites/*/settings.local.php
@@ -77,21 +69,22 @@
 
 # Ignore other scaffold files
 #
-# Ignore all files placed directly at the project root (.editorconfig and
-# .gitattributes). Note that `/web/*` (all files at the document root)
-# is ignored near the top of this file.
+# Ignore all files placed directly at the project root. Rely on
+# .gitignore files placed by drupal/core-composer-scaffold to avoid
+# build errors that arise if non-ignored files are scaffolded.
 # ------------------------------------------------------------------
 /.editorconfig
 /.gitattributes
+
+# The pantheon-systems/drupal-integrations project places a
+# .drush-lock-update file at the project root.
+/.drush-lock-update
 
 # The drupal/core-composer-scaffold component will write .gitignore
 # files to other locations where it scaffolds files that are not
 # already ignored. We must also ignore these generated files.
 /web/**/.gitignore
 
-# The pantheon-systems/drupal-integrations project places a
-# .drush-lock-update file at the project root.
-/.drush-lock-update
 
 # Other common rules
 # ------------------
