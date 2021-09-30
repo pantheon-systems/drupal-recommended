@@ -75,7 +75,8 @@
 # Ignore other scaffold files
 #
 # Ignore all files placed directly at the project root (.editorconfig and
-# .gitattributes)
+# .gitattributes). Note that `/web/*` (all files at the document root)
+# is ignored near the top of this file.
 # ------------------------------------------------------------------
 /.editorconfig
 /.gitattributes
