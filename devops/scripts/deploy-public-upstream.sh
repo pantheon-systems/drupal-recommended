@@ -10,10 +10,12 @@ set -euo pipefail
 
 git remote add public "$UPSTREAM_REPO_REMOTE_URL"
 git fetch public
+git checkout -b release-source --track public/release-source
+
 git checkout "${CIRCLE_BRANCH}"
 
 # List commits between release-source and HEAD, in reverse
-newcommits=$(git log release-source..HEAD --reverse --pretty=format:"%h")
+newcommits=$(git log release-pointer..HEAD --reverse --pretty=format:"%h")
 commits=()
 
 # Identify commits that should be released
@@ -37,8 +39,7 @@ if [[ ${#commits[@]} -eq 0 ]] ; then
 fi
 
 # Cherry-pick commits not modifying circle config onto the release branch
-git checkout -b release-source --track public/release-source
-git pull
+git checkout release-source
 
 if [[ "$CIRCLECI" != "" ]]; then
   git config --global user.email "bot@getpantheon.com"
@@ -53,7 +54,7 @@ for commit in "${commits[@]}"; do
   git cherry-pick "$commit" 2>&1
 done
 
-# Get a patch with the diff between release-pointer and current HEAD and apply it.
+# Squash the diff between release-pointer and current HEAD and apply it.
 git checkout -b public --track public/master
 for commit in "${commits[@]}"; do
   if [[ -z "$commit" ]] ; then
@@ -80,6 +81,7 @@ done
 git checkout release-source
 git push public release-source
 
+git checkout release
 # Update the release-pointer.
 git tag -f -m 'Last commit set on upstream repo' release-pointer HEAD
 
