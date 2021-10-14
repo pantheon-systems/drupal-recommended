@@ -51,16 +51,21 @@ for commit in "${commits[@]}"; do
   fi
   # Sync commits from release (pantheon-systems/drupal-recommended) to release-source (pantheon-recommended/drupal-recommended).
   git cherry-pick "$commit" 2>&1
+done
+
+# Get a patch with the diff between release-pointer and current HEAD and apply it.
+git checkout -b public --track public/master
+for commit in "${commits[@]}"; do
+  if [[ -z "$commit" ]] ; then
+    continue
+  fi
+  # Sync commits from release (pantheon-systems/drupal-recommended) to the master branch (pantheon-recommended/drupal-recommended) squashing the commits.
+  git cherry-pick -n "$commit" 2>&1
+
   # Product request - single commit per release
   # The commit message from the last commit will be used.
   git log --format=%B -n 1 "$commit" > /tmp/commit_message
 done
-
-# Get a patch with the diff between release-pointer and current HEAD and apply it.
-git diff release-pointer..HEAD > all-changes.patch
-git checkout -b public --track public/master
-git apply < all-changes.patch
-git add -A .
 
 git commit -F /tmp/commit_message --author='Pantheon Automation <bot@getpantheon.com>'
 
