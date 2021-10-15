@@ -6,15 +6,11 @@ set -euo pipefail
 
 . devops/scripts/commit-type.sh
 
-# At the end of this process, release-source in pantheon-upstreams/drupal-recommended will be the same than release in pantheon-systems/drupal-recommended.
-
 git remote add public "$UPSTREAM_REPO_REMOTE_URL"
 git fetch public
-git checkout -b release-source --track public/release-source
-
 git checkout "${CIRCLE_BRANCH}"
 
-# List commits between release-source and HEAD, in reverse
+# List commits between release-pointer and HEAD, in reverse
 newcommits=$(git log release-pointer..HEAD --reverse --pretty=format:"%h")
 commits=()
 
@@ -39,7 +35,8 @@ if [[ ${#commits[@]} -eq 0 ]] ; then
 fi
 
 # Cherry-pick commits not modifying circle config onto the release branch
-git checkout release-source
+git checkout -b public --track public/master
+git pull
 
 if [[ "$CIRCLECI" != "" ]]; then
   git config --global user.email "bot@getpantheon.com"
@@ -50,22 +47,11 @@ for commit in "${commits[@]}"; do
   if [[ -z "$commit" ]] ; then
     continue
   fi
-  # Sync commits from release (pantheon-systems/drupal-recommended) to release-source (pantheon-recommended/drupal-recommended).
-  git cherry-pick "$commit" 2>&1
-done
-
-# Squash the diff between release-pointer and current HEAD and apply it.
-git checkout -b public --track public/master
-for commit in "${commits[@]}"; do
-  if [[ -z "$commit" ]] ; then
-    continue
-  fi
-  # Sync commits from release (pantheon-systems/drupal-recommended) to the master branch (pantheon-recommended/drupal-recommended) squashing the commits.
   git cherry-pick -n "$commit" 2>&1
-
   # Product request - single commit per release
   # The commit message from the last commit will be used.
   git log --format=%B -n 1 "$commit" > /tmp/commit_message
+  # git commit --amend --no-edit --author='Pantheon Automation <bot@getpantheon.com>'
 done
 
 git commit -F /tmp/commit_message --author='Pantheon Automation <bot@getpantheon.com>'
@@ -77,12 +63,9 @@ for branch in "${release_branches[@]}"; do
   git push public public:"$branch"
 done
 
-# Push updated release-source branch now that previous stuff has worked.
-git checkout release-source
-git push public release-source
+git checkout $CIRCLE_BRANCH
 
-git checkout release
-# Update the release-pointer.
+# update the release-pointer
 git tag -f -m 'Last commit set on upstream repo' release-pointer HEAD
 
 # Push release-pointer
