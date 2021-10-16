@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script is pretty tailored to assuming it's running in the CircleCI environment / a fresh git clone.
-# It mirrors most commits from `pantheon-systems/drupal-project:release` to `pantheon-upstreams/drupal-project`.
+# It mirrors most commits from `pantheon-systems/drupal-recommended:release` to `pantheon-upstreams/drupal-recommended`.
 
 set -euo pipefail
 
@@ -56,15 +56,17 @@ done
 
 git commit -F /tmp/commit_message --author='Pantheon Automation <bot@getpantheon.com>'
 
-# update the release-pointer
-git tag -f -m 'Last commit set on upstream repo' release-pointer HEAD
-
 # Push released commits to a few branches on the upstream repo.
 # Since all commits to this repo are automated, it shouldn't hurt to put them on both branch names.
 release_branches=('master' 'main')
 for branch in "${release_branches[@]}"; do
   git push public public:"$branch"
 done
+
+git checkout $CIRCLE_BRANCH
+
+# update the release-pointer
+git tag -f -m 'Last commit set on upstream repo' release-pointer HEAD
 
 # Push release-pointer
 git push -f origin release-pointer
