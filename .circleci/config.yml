@@ -13,14 +13,10 @@ jobs:
       - checkout
       - run:
           name: Copy commits to destination repo
-          command: devops/scripts/deploy-public-upstream.sh
+          command: echo 'Hello world'
 
 workflows:
   version: 2
   deploy-public-upstream:
     jobs:
-      - deploy-public-upstream:
-          filters:
-            branches:
-              only:
-                - release
+      - deploy-public-upstream
