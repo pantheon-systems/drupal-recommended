@@ -1,5 +1,5 @@
 {
-    "name": "pantheon-upstreams/drupal-project",
+    "name": "pantheon-upstreams/drupal-recommended",
     "description": "Install Drupal 9 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
