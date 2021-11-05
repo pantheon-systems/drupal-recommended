@@ -2,11 +2,11 @@
 
 There are some atypical development and release procedures in use with this repository:
  1. The currently released version of this repository lives in parallel in the `main` and `master` branches of
-    [pantheon-upstreams/drupal-project](https://github.com/pantheon-upstreams/drupal-project).  
-    `pantheon-upstreams/drupal-project` closely mirrors the development repository at [pantheon-systems/drupal-project](https://github.com/pantheon-systems/drupal-project)
+    [pantheon-upstreams/drupal-recommended](https://github.com/pantheon-upstreams/drupal-recommended).  
+    `pantheon-upstreams/drupal-recommended` closely mirrors the development repository at [pantheon-systems/drupal-recommended](https://github.com/pantheon-systems/drupal-recommended)
     and is automatically updated by a CircleCI process.
- 1. Changes are made by submitting a PR against the `default` branch of `pantheon-systems/drupal-project`.
- 1. Merging a PR to `default` _does not_ create a new release of `pantheon-upstreams/drupal-project`. This allows us to
+ 1. Changes are made by submitting a PR against the `default` branch of `pantheon-systems/drupal-recommended`.
+ 1. Merging a PR to `default` _does not_ create a new release of `pantheon-upstreams/drupal-recommended`. This allows us to
     batch more than one relatively small change into a single new "release" such that the number of separate update
     events appearing on customer dashboards is more controlled.
 
