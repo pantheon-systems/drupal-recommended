@@ -1,7 +1,16 @@
 # Changelog
 
-All notable changes specific to pantheon-upstreams/drupal-project are noted here.
+All notable changes specific to pantheon-upstreams/drupal-recommended are noted here.
 
+
+## Pantheon Update #2 - tbd
+
+### Changed
+
+- Renamed repository from pantheon-upstreams/drupal-project to pantheon-upstreams/drupal-recommended.
+- Update .gitignore to make it easier to manage changes to the Drupal core scaffold files.
+- Move most dependencies out of `upstream-configuration` to give more control to individual sites.
+- Install contrib modules to `web/modules/contrib` rather than `web/modules/composer`.
 
 
 ## Pantheon Update #1 - 2021-02-03

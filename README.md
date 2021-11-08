@@ -15,8 +15,8 @@ Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-
 ## Contributing
 
 Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-project` repository is a mirror that does not
+`pantheon-upstreams/drupal-recommended` repository is a mirror that does not
 directly accept pull requests.
 
-Instead, to propose a change, please fork [pantheon-systems/drupal-project](https://github.com/pantheon-systems/drupal-project)
+Instead, to propose a change, please fork [pantheon-systems/drupal-recommended](https://github.com/pantheon-systems/drupal-recommended)
 and submit a PR to that repository.
