@@ -95,3 +95,10 @@
 
 # Ignore .env files as they are personal
 #/.env
+
+# Ignore OS generated files #
+.DS_Store*
+
+# Ignore local dev environments #
+.ddev/*
+web/sites/default/settings.ddev.php
