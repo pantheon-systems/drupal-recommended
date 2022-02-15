@@ -14,13 +14,13 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "self.version",
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drush/drush": "^10",
         "pantheon-systems/drupal-integrations": "^9",
-        "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^10"
+        "pantheon-upstreams/upstream-configuration": "self.version"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
@@ -74,5 +74,16 @@
         "platform": {
             "php": "7.4"
         }
+    },
+    "_cu-starterkit-comment": "Scripts have to managed in the root composer. See https://getcomposer.org/doc/04-schema.md#scripts",
+    "scripts": {
+        "post-install-cmd": [
+            "mkdir -p web/libraries/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist web/libraries/bootstrap",
+            "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config",
+            "rm -rf vendor/simplesamlphp/simplesamlphp/metadata && ln -sf ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/metadata",
+            "rm -rf vendor/simplesamlphp/simplesamlphp/cert && ln -sf ../../../private/simplesamlphp/cert vendor/simplesamlphp/simplesamlphp/cert"
+        ],
+        "post-update-cmd": []
     }
 }
