@@ -2,6 +2,8 @@
     "name": "pantheon-upstreams/drupal-recommended",
     "description": "Install Drupal 9 with Composer on Pantheon.",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "MIT",
     "repositories": [
         {
@@ -28,8 +30,6 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
             "locations": {

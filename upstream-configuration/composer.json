@@ -1,6 +1,8 @@
 {
     "name": "pantheon-upstreams/upstream-configuration",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "composer",
