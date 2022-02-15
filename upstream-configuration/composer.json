@@ -53,7 +53,15 @@
         "drupal/gtm_exclude_cookie": "1.0.x-dev",
         "drupal/metatag": "^1.19",
         "drupal/pathauto": "^1.9",
-        "drupal/xmlsitemap": "^1.2"
+        "drupal/xmlsitemap": "^1.2",
+        "drupal/viewsreference": "^1.7",
+        "drupal/views_data_export": "^1.1",
+        "drupal/csv_serialization": "^2.0",
+        "drupal/xls_serialization": "^1.2",
+        "drupal/views_bulk_operations": "^4.0",
+        "drupal/views_autosubmit": "^1.4",
+        "drupal/sendgrid_integration": "^1.7",
+        "drupal/swiftmailer": "^2.2"
     },
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
