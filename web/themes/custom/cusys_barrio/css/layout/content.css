@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Styles for CUSys Bootstrap Barrio's content layouts.
+ */
+.node__content {
+  font-size: 1.125rem;
+}
+
+.layout-background {
+  position: relative;
+  width: 100%;
+}
+
+.layout-background-wrapper .row {
+  position: relative;
+}
+
+.layout-background-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.layout-background-wrapper .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.layout-background-wrapper .media-view-mode-hero-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-background-wrapper .media-view-mode-hero-banner img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}

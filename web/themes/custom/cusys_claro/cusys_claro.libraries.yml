@@ -1,0 +1,7 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/theme/colors.css: {}
+      css/theme/toolbar.theme.css: {}
+      css/theme/content-moderation.theme.css: {}

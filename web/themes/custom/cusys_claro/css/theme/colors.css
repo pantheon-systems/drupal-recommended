@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Styling for theme colors.
+ */
+
+ /* Layouts */
+.layout-icon__region {
+  fill: #cfb87c;
+  stroke: #000000;
+}

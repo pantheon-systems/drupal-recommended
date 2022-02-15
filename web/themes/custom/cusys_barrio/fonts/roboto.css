@@ -1,0 +1,148 @@
+/* ---------- Alegreya, Roboto Condensed, Roboto ---------- */
+
+h1,
+.h1,
+h2,
+.h2,
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3,
+.h3,
+h3 a,
+.h3 a,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Roboto', 'Arial', 'Verdana', sans-serif;
+  font-weight: 700;
+  font-size: 1.750rem;
+  line-height: 1.2;
+  font-display: swap;
+}
+
+h2,
+.h2,
+h2 a,
+.h2 a {
+  font-size: 1.625rem;
+}
+
+h3,
+.h3,
+h3 a,
+.h3 a {
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font-size: 1.438rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.250rem;
+  line-height: 1;
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+h6,
+.h6 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+body,
+p,
+a,
+li {
+  font-family: 'Roboto', 'Arial', 'Verdana', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-display: swap;
+}
+
+/* Small */
+@media (min-width: 36em) {
+
+  h1,
+  .h1,
+  h1 a,
+  .h1 a {
+    font-size: 2.500rem;
+    line-height: 1;
+  }
+
+  h2,
+  .h2,
+  h2 a,
+  .h2 a {
+    font-size: 2.250rem;
+  }
+
+  h3,
+  .h3,
+  h3 a,
+  .h3 a {
+    font-size: 1.875rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.625rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.250rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 1.125rem;
+  }
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+/* XLarge and up */
+@media (min-width: 75em) {
+
+  h1,
+  .h1,
+  h1 a,
+  .h1 a {
+    font-size: 2.625rem;
+    line-height: 1.2;
+  }
+
+  h2,
+  .h2,
+  h2 a,
+  .h2 a {
+    font-size: 2.375rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.500rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 1.250rem;
+  }
+}

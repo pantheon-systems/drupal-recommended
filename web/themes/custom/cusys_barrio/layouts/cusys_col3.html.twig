@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a media layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * Additional layout settings 
+ * - settings.cusys_column_setting: selected column bundle for layout - default to 3col__4_4_4 (equal columns)
+ *
+ * @ingroup themeable
+ */
+#}
+{% set column_layout_setting = settings.cusys_column_setting %}
+
+{% if content %}
+  <div{{ attributes.addClass('row') }}>
+
+    {% if column_layout_setting == '3col__6_4_2' %}
+      <div{{ region_attributes.first.addClass('col-md-6 col-lg-6') }}>
+        {{ content.first }}
+      </div>
+
+      <div{{ region_attributes.second.addClass('col-md-6 col-lg-4') }}>
+        {{ content.second }}
+      </div>
+
+      <div{{ region_attributes.third.addClass('col-md-12 col-lg-2') }}>
+        {{ content.third }}
+      </div>
+    {% elseif column_layout_setting == '3col__6_3_3' %}
+      <div{{ region_attributes.first.addClass('col-md-12 col-lg-6') }}>
+        {{ content.first }}
+      </div>
+
+      <div{{ region_attributes.second.addClass('col-md-6 col-lg-3') }}>
+        {{ content.second }}
+      </div>
+
+      <div{{ region_attributes.third.addClass('col-md-6 col-lg-3') }}>
+        {{ content.third }}
+      </div>
+    {% else %}
+      <div{{ region_attributes.first.addClass('col-sm-4') }}>
+        {{ content.first }}
+      </div>
+
+      <div{{ region_attributes.second.addClass('col-sm-4') }}>
+        {{ content.second }}
+      </div>
+
+      <div{{ region_attributes.third.addClass('col-sm-4') }}>
+        {{ content.third }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Styles for CUSys Bootstrap Barrio's forms.
+ */
+.cusys-barrio .form-item-form-title h4 {
+  font-size: 1.250rem;
+  font-weight: 500;
+}
+
+.cusys-barrio .form-submit::before {
+  display: none;
+}
+
+.webform-button--submit.btn {
+  font-size: 1.500rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.cusys-barrio form .form-item-disclaimer,
+.cusys-barrio form .form-item-disclaimer p,
+.cusys-barrio form .form-item-disclaimer a {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/* Small */
+@media (min-width: 36em) {
+  .cusys-barrio .form-item-form-title h4 {
+    font-size: 1.500rem;
+  }
+}

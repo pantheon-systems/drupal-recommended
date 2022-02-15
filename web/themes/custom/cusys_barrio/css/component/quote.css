@@ -1,0 +1,48 @@
+/**
+ * @file
+ * Visual styles for CU Systems Bootstrap Barrio's card component.
+ */
+.quote {
+  margin: 0;
+}
+
+.quote blockquote {
+  margin: 0;
+  padding-top: 1.250rem;
+  padding-bottom: 1.250rem;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.quote blockquote.text-center {
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+}
+
+blockquote p {
+  line-height: 2.45rem;
+}
+
+blockquote p:first-child::before {
+  content: open-quote;
+  position: relative;
+  top: 0.625rem;
+  right: 0.313rem;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+}
+
+blockquote p:last-child::after {
+  content: close-quote;
+  position: relative;
+  top: 0.625rem;
+  left: 0.313rem;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+}
+
+.quote figcaption {
+  margin-top: 1.250rem;
+}

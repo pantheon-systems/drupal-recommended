@@ -1,0 +1,39 @@
+cuonline_barrio.extra_small:
+  label: extra_small
+  mediaQuery: 'all and (max-width: 35.99em)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+cuonline_barrio.small:
+  label: small
+  mediaQuery: 'all and (min-width: 36em) and (max-width: 47.99em)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+cuonline_barrio.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em) and (max-width: 61.99em)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+cuonline_barrio.large:
+  label: large
+  mediaQuery: 'all and (min-width: 62em) and (max-width: 74.99em)'
+  weight: 2
+  multipliers:
+    - 1x
+cuonline_barrio.extra:
+  label: extra
+  mediaQuery: 'all and (min-width: 75em) and (max-width: 87.49em)'
+  weight: 3
+  multipliers:
+    - 1x
+cuonline_barrio.extra_large:
+  label: extra_large
+  mediaQuery: 'all and (min-width: 87.50em)'
+  weight: 4
+  multipliers:
+    - 1x

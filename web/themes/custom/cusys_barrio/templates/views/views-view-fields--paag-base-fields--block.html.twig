@@ -1,0 +1,180 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * - f_name: Name of Degree value
+ * - f_media: Campus logo
+ * - f_campus: Campus name
+ * - f_in_state_cost: In State Cost value
+ * - f_in_state_disclaimer: Disclaimer text for in state
+ * - f_out_of_state_cost: Out of State Cost value
+ * - f_out_of_state_disclaimer: Disclaimer text for out of state
+ * - f_no_tuition_disclaimer: Disclaimer for no tuition values
+ * - f_application_deadline: Application Deadline value
+ * - f_credit_hours: Credit Hours value
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+{% block view %}
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0">
+    
+    {# Name of Degree Program #}
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="card-title">Degree Program:</h3>
+          <p class="card-text program-at-a-glance--text-lg">{{ f_name }}</p>
+        </div>
+      </div>
+    </div>
+    {# Offered By #}
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="card-title">Offered By:</h3>
+          {% if f_media %}
+            {{ drupal_image(f_media, 'content_media_card', {alt: f_campus|t}, responsive=true) }}
+          {% else %}
+            <p class="card-text text-center program-at-a-glance--text-lg">{{ f_campus }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {# Tuition #}
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="card-title">Tuition:</h3>
+          <ul class="nav nav-tabs" id="tuitionTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="in_state_tab" data-bs-toggle="tab" data-bs-target="#in_state" type="button" role="tab" aria-controls="in_state" aria-selected="true">In State</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="out_of_state_tab" data-bs-toggle="tab" data-bs-target="#out_of_state" type="button" role="tab" aria-controls="out_of_state" aria-selected="false">Out of State</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="tuitionTabContent">
+            {% if f_in_state_cost %}
+              <div class="tab-pane fade show active" id="in_state" role="tabpanel" aria-labelledby="in_state_tab">
+                <p class="card-text program-at-a-glance--text-lg">Cost Per Credit:</p>
+                {% if f_in_state_disclaimer %}
+                  <p class="card-text text-center program-at-a-glance--text-xlg">${{ f_in_state_cost }}*</p>
+                  <div class="disclaimer">{{ f_in_state_disclaimer|raw }}</div>
+                {% else %}
+                  <p class="card-text text-center program-at-a-glance--text-xlg">${{ f_in_state_cost }}</p>
+                {% endif %}
+              </div>
+            {% else %}
+              <div class="tab-pane fade show active" id="in_state" role="tabpanel" aria-labelledby="in_state_tab">
+                {% if f_no_tuition_disclaimer %}
+                  {{ f_no_tuition_disclaimer|raw }}
+                {% else %}
+                  <p class="card-text">No tuition information found.</p>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if f_out_of_state_cost %}
+              <div class="tab-pane fade" id="out_of_state" role="tabpanel" aria-labelledby="out_of_state_tab">
+                <p class="card-text program-at-a-glance--text-lg">Cost Per Credit:</p>
+                {% if f_out_of_state_disclaimer %}
+                  <p class="card-text text-center program-at-a-glance--text-xlg">${{ f_out_of_state_cost }}*</p>
+                  <div class="disclaimer">{{ f_out_of_state_disclaimer|raw }}</div>
+                {% else %}
+                  <p class="card-text text-center program-at-a-glance--text-xlg">${{ f_out_of_state_cost }}</p>
+                {% endif %}
+              </div>
+            {% else %}
+              <div class="tab-pane fade show" id="out_of_state" role="tabpanel" aria-labelledby="out_of_state_tab">
+                {% if f_no_tuition_disclaimer %}
+                  {{ f_no_tuition_disclaimer|raw }}
+                {% else %}
+                  <p class="card-text">No tuition information found.</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {# Application Deadline #}
+    {% if f_application_deadline %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">Application Deadline:</h3>
+            <p class="card-text program-at-a-glance--text-lg"><time datetime="{{ f_application_deadline|date("c") }}">{{ f_application_deadline|date("F j, Y") }}</time></p>
+          </div>
+        </div>
+      </div>
+    {% elseif f_credit_hours %}
+    {# Credit Hours #}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">Credit Hours:</h3>
+            <p class="card-text text-center program-at-a-glance--text-xlg">{{ f_credit_hours }}</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {# Credit Hours #}
+    {% if f_application_deadline %}
+      {% if f_credit_hours %}
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Credit Hours:</h3>
+              <p class="card-text text-center program-at-a-glance--text-xlg">{{ f_credit_hours }}</p>
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="col d-lg-none">
+          <div class="card card--fake h-100">
+            <div class="card-body">
+              <h3 class="card-title">&nbsp;</h3>
+              <p class="card-text text-center program-at-a-glance--text-xlg">&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% elseif f_credit_hours %}
+      <div class="col d-none d-lg-block">
+        <div class="card card--fake h-100">
+          <div class="card-body">
+            <h3 class="card-title">&nbsp;</h3>
+            <p class="card-text text-center program-at-a-glance--text-xlg">&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+{% endblock view %}

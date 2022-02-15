@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ * - page_type: Node bundle.
+ * - page_title: Page title.
+ * - page_subtitle: Page subtitle.
+ * TODO - need better way to determine if there is a form. If debug is on there is commented out twig debug in the content even if there is no form value.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set image_attributes = create_attribute() %}
+
+{% set title %}
+{% if page_title %}
+ <div class='title'>
+  <div class='title-inner'>
+   <h1>{{- page_title -}}</h1>
+   
+    {% if page_type == 'program' %}
+     {% if page_subtitle %}
+        <div class="sub-title">{{- page_subtitle -}}</div>
+      {% else %}
+        {% if fields.field_campus.content %}
+          <div class="sub-title"><div class="sub-title-prefix">Offered by:</div>{{- fields.field_campus.content -}}</div>
+        {% endif %}
+      {% endif %}
+    {% else %}
+      {% if page_subtitle %}
+      <div class="sub-title">{{- page_subtitle -}}</div>
+      {% endif %}
+    {% endif %}
+   {% endif %}
+  </div>
+ </div>
+{% endset %}
+  <div{{ image_attributes.addClass('hero-background') }}>
+    {{ fields.field_background_media.content }}
+    <div class="row d-md-none">
+      <div class="col-12 hero-background--sm-wrap">{{ title }}</div>
+      <div class="col-12">
+        {% if fields.field_webform_mobile.content|trim %}
+        <aside class="featured-top__inner hero-webform section clearfix" role="complementary">
+          {{ fields.field_webform_mobile.content }}
+        </aside>
+        {% endif %}
+      </div>
+    </div>
+    <div class="container d-none d-md-block">
+    <div class="row align-items-end">
+      <div class="col col-12 col-md-7 col-lg-8">{{ title }}</div>
+      <div class="col col-12 col-md-5 col-lg-4">
+        {% if fields.field_webform.content|trim %}
+        <aside class="featured-top__inner hero-webform section float-end clearfix" role="complementary">
+          {{ fields.field_webform.content }}
+        </aside>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

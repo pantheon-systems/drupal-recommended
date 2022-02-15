@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styles for CUSys Bootstrap Barrio's colors.
+ */
+#toolbar-link-view-switch_user-page_1:before {
+  background-image: url(/core/misc/icons/787878/key.svg);
+}
+
+.content-moderation-entity-moderation-form {
+  display: none;
+}
+
+/* Layouts */
+.layout-icon__region {
+  fill: #cfb87c;
+  stroke: #000000;
+}

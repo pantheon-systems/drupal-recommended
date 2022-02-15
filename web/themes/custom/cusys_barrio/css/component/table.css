@@ -1,0 +1,53 @@
+/**
+ * @file
+ * Styles for CUSys Bootstrap Barrio's tables.
+ */
+.cusys-barrio table,
+.cke_editable table {
+    margin: 0.938rem 0;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 1.125rem;
+}
+
+.cusys-barrio tr,
+.cke_editable tr {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 0.1em 0.6em;
+}
+
+.cusys-barrio thead>tr,
+.cke_editable thead>tr {
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+
+.cusys-barrio table tr th,
+.cke_editable table tr th {
+    border-bottom-style: solid;
+}
+
+.cusys-barrio table tr th,
+.cke_editable table tr th,
+.cusys-barrio table tr th a,
+.cke_editable table tr th a,
+.cusys-barrio table tr th a:hover,
+.cke_editable table tr th a:hover,
+.cusys-barrio table tr th a:focus,
+.cke_editable table tr th a:focus {
+    font-weight: 700;
+}
+
+.cusys-barrio tr td,
+.cke_editable tr td,
+.cusys-barrio tr th,
+.cke_editable tr th {
+    padding: 0.625rem 1.250rem;
+    border-right-width: 1px;
+    border-right-style: solid;
+    text-align: left;
+    /* LTR */
+}

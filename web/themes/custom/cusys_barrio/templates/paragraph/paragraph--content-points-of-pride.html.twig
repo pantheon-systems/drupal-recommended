@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * Content: Points of Pride field values
+ * - field_wysiwyg: Text content field
+ * - field_reusable_paragraph: List of paragraphs content to display(field_media,field_wysiwyg)
+ * - text_position: key value to determine overlay text position
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'points-of-pride row g-0'
+  ]
+%}
+{%
+  set text_block_classes = [
+    'col-12',
+    'mb-2',
+    'mb-lg-0',
+    'pe-lg-5',
+    'col-lg-6'
+  ]
+%}
+{% if text_position == 'middle' %}
+  {% set text_position_class = ['align-self-center'] %}
+{% elseif text_position == 'bottom' %}
+  {% set text_position_class = ['align-self-end'] %}
+{% else %}
+  {% set text_position_class = ['align-self-start'] %}
+{% endif %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div{{ attributes.addClass(text_block_classes).addClass(text_position_class) }}>
+        {{ content.field_wysiwyg }}
+      </div>
+      <div class="col-12 mb-2 mb-lg-0 col-lg-6">
+        <div class="points-of-pride--grid row row-cols-1 row-cols-lg-2 g-lg-0 align-items-center">
+          {% for key, item in content.field_pride_points if key|first != '#' %}
+            <div class="col">
+              {{ item }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endblock content %}
+  </div>
+{% endblock paragraph %}

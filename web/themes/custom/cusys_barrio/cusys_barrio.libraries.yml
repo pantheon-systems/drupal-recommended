@@ -1,0 +1,99 @@
+global-styling:
+  version: VERSION
+  js:
+    js/global.js: {}
+  css:
+    component:
+      css/base/variables.css: {}
+      css/base/color.css: {}
+      css/base/elements.css: {}
+      css/base/icons.css: {}
+      css/layout/header.css: {}
+      css/layout/footer.css: {}
+      css/component/navigation.css: {}
+      css/layout/content.css: {}
+      css/component/field.css: {}
+      css/component/form.css: {}
+      css/component/table.css: {}
+  dependencies:
+    - core/once
+
+    # Components
+hero:
+  css:
+    component:
+      css/component/hero.css: {}
+card:
+  css:
+    component:
+      css/component/card.css: {}
+list_pattern:
+  css:
+    component:
+      css/component/list-pattern.css: {}
+points_of_pride:
+  css:
+    component:
+      css/component/points-of-pride.css: {}
+quote:
+  css:
+    component:
+      css/component/quote.css: {}
+program_at_a_glance:
+  css:
+    component:
+      css/component/program-at-a-glance.css: {}
+program_list:
+  css:
+    component:
+      css/component/program-list.css: {}
+
+bootstrap:
+  js:
+    /libraries/popper.js/dist/umd/popper.min.js: { weight: -49 }
+    /libraries/bootstrap/dist/js/bootstrap.min.js: { weight: -49 }
+  css:
+    component:
+      /libraries/bootstrap/dist/css/bootstrap.min.css: {}
+bootstrap_cdn:
+  js:
+    //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css: {}
+color.preview:
+  version: VERSION
+  css:
+    theme:
+      color/preview.css: {}
+  js:
+    color/preview.js: {}
+  dependencies:
+    - color/drupal.color
+    
+# Core
+
+drupal.node.preview:
+  css:
+    component:
+      css/component/node-preview.css: {}
+
+helvetic_neue:
+  version: VERSION
+  css:
+    component:
+      fonts/helvetica_neue.css: {}
+      //fast.fonts.net/cssapi/86696b99-fb1a-4964-9676-9233fb4fca8f.css: {}
+roboto:
+  version: VERSION
+  css:
+    component:
+      fonts/roboto.css: {}
+      //fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,regular&subset=latin&display=swap: { type: external }
+
+styleguide:
+  version: VERSION
+  css:
+    component:
+      css/styleguide/styleguide.css: {}
+      css/styleguide/docs.css: {}

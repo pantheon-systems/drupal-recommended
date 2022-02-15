@@ -1,0 +1,56 @@
+cusys_barrio_col1:
+  label: '1 Column'
+  category: 'CUSYS Columns'
+  path: layouts
+  template: cusys_col1
+  default_region: first
+  icon_map:
+    - [first]
+  regions:
+    first:
+      label: First
+cusys_barrio_col2:
+  label: '2 Columns'
+  category: 'CUSYS Columns'
+  path: layouts
+  template: cusys_col2
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+cusys_barrio_col3:
+  label: '3 Columns'
+  category: 'CUSYS Columns'
+  path: layouts
+  template: cusys_col3
+  default_region: first
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+cusys_barrio_col4:
+  label: '4 Columns'
+  category: 'CUSYS Columns'
+  path: layouts
+  template: cusys_col4
+  default_region: first
+  icon_map:
+    - [first, second, third, fourth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
