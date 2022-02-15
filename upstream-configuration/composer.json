@@ -48,7 +48,12 @@
         "drupal/scheduled_transitions": "^2.2",
         "drupal/scheduled_transitions_sidebar": "^2.0",
         "drupal/shortcode": "^2.0",
-        "drupal/simple_styleguide": "^1.8"
+        "drupal/simple_styleguide": "^1.8",
+        "drupal/google_tag": "^1.4",
+        "drupal/gtm_exclude_cookie": "1.0.x-dev",
+        "drupal/metatag": "^1.19",
+        "drupal/pathauto": "^1.9",
+        "drupal/xmlsitemap": "^1.2"
     },
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
