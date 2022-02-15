@@ -28,7 +28,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -60,6 +60,12 @@
         "enable-patching": true,
         "patchLevel": {
             "drupal/core": "-p2"
+        },
+        "patches-file": "upstream-configuration/composer.patches.json",
+        "patches": {
+            "drupal/core": {
+                "Taxonomy Index for unpublished entities": "https://www.drupal.org/files/issues/2021-02-03/962664-drupal-add-unpublished-nodes-to-taxonomy-index-168.patch"
+            }
         }
     },
     "config": {

@@ -1,0 +1,6 @@
+"drupal/structure_sync": {
+    "D9 - getVocabularyId (undefined method)": "https://www.drupal.org/files/issues/2020-11-05/3180878-undefined-method-getVocabularyId-1.patch"
+},
+"drupal/webform": {
+    "#3260159 - Allow drush_webform_libraries_composer to target composer.json other than root": "https://git.drupalcode.org/project/webform/-/merge_requests/137.patch"
+}
