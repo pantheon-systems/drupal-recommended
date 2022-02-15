@@ -18,7 +18,12 @@
         "drupal/config_batch_export": "^1.0@beta",
         "drupal/config_views": "^2.0@RC",
         "drupal/config_sync": "^2.0@beta",
-        "drupal/config_distro": "^1.0@alpha"
+        "drupal/config_distro": "^1.0@alpha",
+        "drupal/devel": "^4.1",
+        "drupal/devel_kint_extras": "^1.0",
+        "drupal/environment_indicator": "^4.0",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/twig_vardumper": "^3.0"
     },
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
