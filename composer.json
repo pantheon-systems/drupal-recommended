@@ -13,6 +13,19 @@
         {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/taxonomy_revision_ui",
+                "type": "drupal-module",
+                "version": "1.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://git.drupalcode.org/sandbox/hugronaphor-3064521.git",
+                    "reference": "8ecf8c3757cd5f4c2e3dde5ce05bdbb5d2f865e1"
+                }
+            }
         }
     ],
     "require": {
