@@ -1,0 +1,8 @@
+name: CU Styleguide
+type: module
+description: Adds Styleguide Patterns
+package: CU Starter Kit
+core_version_requirement: ^9
+
+dependencies:
+  - drupal:simple_styleguide
