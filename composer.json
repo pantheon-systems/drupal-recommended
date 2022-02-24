@@ -34,7 +34,6 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
-        "drupal/pantheon_advanced_page_cache": "^1.2",
         "drush/drush": "^10",
         "pantheon-systems/drupal-integrations": "^9"
     },
