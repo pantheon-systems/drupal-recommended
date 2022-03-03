@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+    - paragraphs.paragraphs_type.content_wysiwyg
+    - paragraphs.paragraphs_type.layout_cu_systems
+  module:
+    - entity_reference_revisions
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      layout_cu_systems: layout_cu_systems
+      content_wysiwyg: content_wysiwyg
+    negate: 0
+    target_bundles_drag_drop:
+      content_wysiwyg:
+        weight: 3
+        enabled: true
+      layout_cu_systems:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

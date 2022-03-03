@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_wysiwyg
+label: 'Content: WYSIWYG'
+icon_uuid: null
+icon_default: null
+description: 'WYSIWYG content type paragraph.'
+behavior_plugins: {  }

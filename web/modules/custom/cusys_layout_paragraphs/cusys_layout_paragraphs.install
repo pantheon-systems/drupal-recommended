@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the cusys_layout_paragraphs module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function cusys_layout_paragraphs_install() { 
+  // Setup Page entity_form_display
+  $configForm = \Drupal::configFactory()->getEditable('core.entity_form_display.node.page.default');
+  $contentFields = $configForm->get('content');
+  if (!in_array('field_content', $contentFields )) {
+    $dependencies = $configForm->get('dependencies.module');
+    $dependencies[] = 'layout_paragraphs';
+    $viewForm = [
+      'type' => 'layout_paragraphs',
+      'weight' => 69,
+      'region' => 'content',
+      'settings' => [
+        'preview_view_mode' => 'preview',
+        'nesting_depth' => '0',
+        'require_layouts' => '1',
+      ],
+      'third_party_settings' => array(),
+    ];
+    $contentFields['field_content'] = $viewForm;
+    $configForm->set('dependencies.module', $dependencies);
+    $configForm->set('content', $contentFields);
+    $configForm->set('hidden', array());
+    $configForm->save(TRUE);
+  }
+
+  // Setup Page entity_view_display
+  $configView = \Drupal::configFactory()->getEditable('core.entity_view_display.node.page.default');
+  $contentFields2 = $configView->get('content');
+  if (!in_array('field_content', $contentFields2 )) {
+    $dependencies2 = $configView->get('dependencies.module');
+    $dependencies2[] = 'layout_paragraphs';
+    $viewDisplay = [
+      'label' => 'hidden',
+      'type' => 'layout_paragraphs',
+      'weight' => 102,
+      'region' => 'content',
+      'settings' => [
+        'view_mode' => 'default',
+        'link' => '',
+      ],
+      'third_party_settings' => array(),
+    ];
+    $contentFields2['field_content'] = $viewDisplay;
+    $configView->set('dependencies.module', $dependencies2);
+    $configView->set('content', $contentFields2);
+    $configView->set('hidden', array());
+    $configView->save(TRUE);
+  }
+}

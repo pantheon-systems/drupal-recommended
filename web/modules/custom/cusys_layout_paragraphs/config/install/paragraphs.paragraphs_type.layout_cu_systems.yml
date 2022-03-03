@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: layout_cu_systems
+label: 'Layout: CU Systems'
+icon_uuid: null
+icon_default: null
+description: 'CU Systems theme layouts'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'
+      layout_twocol: 'Two column'
+      layout_threecol_25_50_25: 'Three column 25/50/25'
