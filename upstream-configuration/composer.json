@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "drupal/webform": "6.2.0-beta1",
+        "drupal/webform": "^6.0",
         "drupal/structure_sync": "^2.0",
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/simplesamlphp_auth": "^3.2",
