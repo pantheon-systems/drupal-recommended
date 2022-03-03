@@ -30,12 +30,12 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cu-starterkit/upstream-configuration": "^1",
         "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drush/drush": "^10",
-        "pantheon-systems/drupal-integrations": "^9",
-        "cu-starterkit/upstream-configuration": "^1"
+        "pantheon-systems/drupal-integrations": "^9"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
