@@ -102,3 +102,5 @@
 # Ignore local dev environments #
 .ddev/*
 web/sites/default/settings.ddev.php
+web/sites/default/default.services.yml
+web/sites/default/default.settings.php

@@ -86,6 +86,13 @@
         "sort-packages": true,
         "platform": {
             "php": "7.4"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "simplesamlphp/composer-module-installer": false,
+            "composer/installers": false,
+            "cweagans/composer-patches": false,
+            "drupal/core-composer-scaffold": false
         }
     },
     "_cu-starterkit-comment": "Scripts have to managed in the root composer. See https://getcomposer.org/doc/04-schema.md#scripts",
