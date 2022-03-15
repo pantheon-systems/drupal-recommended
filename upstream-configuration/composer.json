@@ -40,7 +40,7 @@
         "drupal/field_group": "^3.2",
         "drupal/field_permissions": "^1.1",
         "drupal/focal_point": "^1.5",
-        "drupal/layout_paragraphs": "^1.0",
+        "drupal/layout_paragraphs": ">=1.0.0 <3.0.0",
         "drupal/link_attributes": "^1.11",
         "drupal/linkit": "6.0.0-beta3",
         "drupal/moderation_sidebar": "^1.4",
