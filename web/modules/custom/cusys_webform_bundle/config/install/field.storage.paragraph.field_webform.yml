@@ -5,6 +5,8 @@ dependencies:
   module:
     - paragraphs
     - webform
+_core:
+  default_config_hash: JKZu9xo-p10BP4ZA1vLIbSCSZ1gZKKG4P_0iCz-ILik
 id: paragraph.field_webform
 field_name: field_webform
 entity_type: paragraph

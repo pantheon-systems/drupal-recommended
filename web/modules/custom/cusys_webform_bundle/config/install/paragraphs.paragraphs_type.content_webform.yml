@@ -4,6 +4,8 @@ status: true
 dependencies:
   content:
     - 'file:file:cf66bb45-b6bf-4fe0-8346-53682426fc30'
+_core:
+  default_config_hash: yfd5euu3JNNj8XSO_60OQn4VKQ3HetzVEwxqRiE2y0U
 id: content_webform
 label: 'Content: Webform'
 icon_uuid: cf66bb45-b6bf-4fe0-8346-53682426fc30

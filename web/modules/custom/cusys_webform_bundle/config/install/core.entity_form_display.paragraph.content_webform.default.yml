@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.content_webform
   module:
     - webform
+_core:
+  default_config_hash: kY-gf-Zyk3PYAIVs_2N-emD_853Lyt2FH5O4CcWPvtA
 id: paragraph.content_webform.default
 targetEntityType: paragraph
 bundle: content_webform
