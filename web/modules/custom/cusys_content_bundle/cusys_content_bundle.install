@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the cusys_content_bundle module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function cusys_content_bundle_install() { 
+  // Setup linkit for editor.editor.basic_html.yml
+  $configEditor = \Drupal::configFactory()->getEditable('editor.editor.basic_html');
+  $settingsFields = $configEditor->get('settings');
+  if (!in_array('drupallink', $settingsFields['plugins'] )) {
+    $plugin = [
+      'linkit_enabled' => TRUE,
+      'linkit_profile' => 'default',
+    ];
+    $configEditor->set('settings.plugins.drupallink', $plugin);
+    $configEditor->save(TRUE);
+  }
+
+  // Setup linkit for filter.format.basic_html.yml
+  $configFilter = \Drupal::configFactory()->getEditable('filter.format.basic_html');
+  $filters = $configFilter->get('filters');
+  if (!in_array('linkit', $filters )) {
+    $linkitFilter = [
+      'id' => 'linkit',
+      'provider' => 'linkit',
+      'status' => TRUE,
+      'weight' => 0,
+      'settings' => [
+        'title' => TRUE,
+      ],
+    ];
+    $configFilter->set('filters.linkit', $filters);
+    $configFilter->save(TRUE);
+  }
+}
