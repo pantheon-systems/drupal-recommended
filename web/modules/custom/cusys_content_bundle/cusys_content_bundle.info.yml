@@ -1,0 +1,9 @@
+name: CU Content Bundle 
+type: module
+description: Defines content modules used in starter kit.
+package: CU Starter Kit
+core_version_requirement: ^9
+
+dependencies:
+  - drupal:linkit
+  - drupal:cusys_layout_paragraphs
