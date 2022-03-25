@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.view_reference.field_view
+    - field.field.paragraph.view_reference.field_view_reference
     - paragraphs.paragraphs_type.view_reference
   module:
     - viewsreference
@@ -11,13 +11,17 @@ targetEntityType: paragraph
 bundle: view_reference
 mode: default
 content:
-  field_view:
-    weight: 0
+  field_view_reference:
+    type: viewsreference_formatter
     label: hidden
     settings:
       plugin_types:
-        - block
+        entity_reference: entity_reference
+        default: 0
+        page: 0
+        block: 0
+        feed: 0
     third_party_settings: {  }
-    type: viewsreference_formatter
+    weight: 0
     region: content
 hidden: {  }

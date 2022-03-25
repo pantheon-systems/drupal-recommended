@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.view_reference.field_view
+    - field.field.paragraph.view_reference.field_view_reference
     - paragraphs.paragraphs_type.view_reference
   module:
     - viewsreference
@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: view_reference
 mode: default
 content:
-  field_view:
+  field_view_reference:
     weight: 0
     settings:
       match_operator: CONTAINS
