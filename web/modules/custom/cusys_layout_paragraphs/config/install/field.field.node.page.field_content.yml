@@ -6,6 +6,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.content_wysiwyg
     - paragraphs.paragraphs_type.layout_cu_systems
+    - paragraphs.paragraphs_type.view_reference
   module:
     - entity_reference_revisions
 id: node.page.field_content
@@ -24,6 +25,7 @@ settings:
     target_bundles:
       layout_cu_systems: layout_cu_systems
       content_wysiwyg: content_wysiwyg
+      view_reference: view_reference
     negate: 0
     target_bundles_drag_drop:
       content_wysiwyg:
@@ -31,5 +33,8 @@ settings:
         enabled: true
       layout_cu_systems:
         weight: 2
+        enabled: true
+      view_reference:
+        weight: 6
         enabled: true
 field_type: entity_reference_revisions
