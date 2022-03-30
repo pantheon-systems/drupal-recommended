@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
     - field_permissions
-    - node
     - paragraphs
+    - views
+    - viewsreference
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_content
-field_name: field_content
-entity_type: node
-type: entity_reference_revisions
+id: paragraph.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+type: viewsreference
 settings:
-  target_type: paragraph
-module: entity_reference_revisions
+  target_type: view
+module: viewsreference
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
