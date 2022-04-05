@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:dd482460-e452-4642-81b7-390867d6737c'
+id: content_horizontal_rule
+label: 'Content: Horizontal Rule'
+icon_uuid: dd482460-e452-4642-81b7-390867d6737c
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGcgaWQ9IkxheWVyXzQ4IiBkYXRhLW5hbWU9IkxheWVyIDQ4Ij48cGF0aCBkPSJNNTEuODcsMzMuNUgxMi4xM2ExLjUsMS41LDAsMCwxLDAtM0g1MS44N0ExLjUsMS41LDAsMCwxLDUxLjg3LDMzLjVaIi8+PC9nPjwvc3ZnPg=='
+description: 'Creates a horizontal rule.'
+behavior_plugins: {  }

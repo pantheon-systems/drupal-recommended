@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:445f55d7-99c8-4687-b1ad-1a71c1169b2f'
+id: content_anchor_link
+label: 'Content: Anchor Link'
+icon_uuid: 445f55d7-99c8-4687-b1ad-1a71c1169b2f
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICAgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItYW5jaG9yIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjUiIHI9IjMiPjwvY2lyY2xlPjxsaW5lIHgxPSIxMiIgeTE9IjIyIiB4Mj0iMTIiIHkyPSI4Ij48L2xpbmU+PHBhdGggZD0iTTUgMTJIMmExMCAxMCAwIDAgMCAyMCAwaC0zIj48L3BhdGg+PC9zdmc+'
+description: 'Places an in-page anchor link(jump-to link).'
+behavior_plugins: {  }
