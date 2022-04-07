@@ -18,14 +18,10 @@ function cusys_media_bundle_install() {
     RoleInterface::AUTHENTICATED_ID,
     'content_editor'
   ]);
-  $roles[RoleInterface::ANONYMOUS_ID]->grantPermission("view media");
-  $roles[RoleInterface::AUTHENTICATED_ID]->grantPermission("view media");
-  //$roles['content_editor']->grantPermission("access media overview");
-  //$roles['content_editor']->grantPermission("administer media");
-
-  //$content_editor = Role::load('content_editor');
-  //$content_editor->grantPermission("access media overview");
-  //$content_editor->grantPermission("administer media");
+  $roles[RoleInterface::ANONYMOUS_ID]->grantPermission("view media")->save();
+  $roles[RoleInterface::AUTHENTICATED_ID]->grantPermission("view media")->save();
+  $roles['content_editor']->grantPermission("access media overview")->save();
+  $roles['content_editor']->grantPermission("administer media")->save();
 
 }
 
@@ -39,10 +35,10 @@ function cusys_media_bundle_uninstall() {
     RoleInterface::AUTHENTICATED_ID,
     'content_editor'
   ]);
-  $roles[RoleInterface::ANONYMOUS_ID]->revokePermission("view media");
-  $roles[RoleInterface::AUTHENTICATED_ID]->revokePermission("view media");
-  //$roles['content_editor']->revokePermission("access media overview");
-  //$roles['content_editor']->revokePermission("administer media");
+  $roles[RoleInterface::ANONYMOUS_ID]->revokePermission("view media")->save();
+  $roles[RoleInterface::AUTHENTICATED_ID]->revokePermission("view media")->save();
+  $roles['content_editor']->revokePermission("access media overview")->save();
+  $roles['content_editor']->revokePermission("administer media")->save();
 
 
 }
