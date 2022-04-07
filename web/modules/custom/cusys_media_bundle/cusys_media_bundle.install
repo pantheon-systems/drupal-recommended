@@ -20,9 +20,12 @@ function cusys_media_bundle_install() {
   ]);
   $roles[RoleInterface::ANONYMOUS_ID]->grantPermission("view media")->save();
   $roles[RoleInterface::AUTHENTICATED_ID]->grantPermission("view media")->save();
-  $roles['content_editor']->grantPermission("access media overview")->save();
-  $roles['content_editor']->grantPermission("administer media")->save();
+  if( $roles['content_editor'] !== null ){
+    $roles['content_editor']->grantPermission("access media overview")->save();
+    $roles['content_editor']->grantPermission("administer media")->save();
+  }
 
+  //WebP
 }
 
 /**
@@ -37,9 +40,10 @@ function cusys_media_bundle_uninstall() {
   ]);
   $roles[RoleInterface::ANONYMOUS_ID]->revokePermission("view media")->save();
   $roles[RoleInterface::AUTHENTICATED_ID]->revokePermission("view media")->save();
-  $roles['content_editor']->revokePermission("access media overview")->save();
-  $roles['content_editor']->revokePermission("administer media")->save();
-
+  if( $roles['content_editor'] !== null ){
+    $roles['content_editor']->revokePermission("access media overview")->save();
+    $roles['content_editor']->revokePermission("administer media")->save();
+  }
 
 }
 
