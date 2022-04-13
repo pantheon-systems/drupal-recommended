@@ -1,0 +1,11 @@
+name: CU Media Bundle
+type: module
+description: Adds common Media modules
+package: CU Starter Kit
+core_version_requirement: ^9
+
+dependencies:
+  - drupal:media
+  - drupal:media_library
+  - drupal:webp
+  - drupal:responsive_image

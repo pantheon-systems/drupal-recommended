@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the cusys_media_bundle.
+ */
+
+use Drupal\user\Entity\Role;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function cusys_media_bundle_install() { 
+  
+  $roles = Role::loadMultiple([
+    RoleInterface::ANONYMOUS_ID,
+    RoleInterface::AUTHENTICATED_ID,
+    'content_editor'
+  ]);
+  $roles[RoleInterface::ANONYMOUS_ID]->grantPermission("view media")->save();
+  $roles[RoleInterface::AUTHENTICATED_ID]->grantPermission("view media")->save();
+  if( $roles['content_editor'] !== null ){
+    $roles['content_editor']->grantPermission("access media overview")->save();
+    $roles['content_editor']->grantPermission("administer media")->save();
+  }
+
+  //WebP
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function cusys_media_bundle_uninstall() {
+ 
+  $roles = Role::loadMultiple([
+    RoleInterface::ANONYMOUS_ID,
+    RoleInterface::AUTHENTICATED_ID,
+    'content_editor'
+  ]);
+  $roles[RoleInterface::ANONYMOUS_ID]->revokePermission("view media")->save();
+  $roles[RoleInterface::AUTHENTICATED_ID]->revokePermission("view media")->save();
+  if( $roles['content_editor'] !== null ){
+    $roles['content_editor']->revokePermission("access media overview")->save();
+    $roles['content_editor']->revokePermission("administer media")->save();
+  }
+
+}
+
