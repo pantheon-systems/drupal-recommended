@@ -1,22 +1,20 @@
+[![PHP Composer](https://github.com/cu-uis/cu-starterkit-project/actions/workflows/php.yml/badge.svg)](https://github.com/cu-uis/cu-starterkit-project/actions/workflows/php.yml)
+
 # Composer-enabled Drupal template
 
-This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
-that work with the Platform's Integrated Composer build process. It is also the
-Platform's standard Drupal 9 upstream.
-
-Unlike with earlier Pantheon upstreams, files such as Drupal Core that you are
-unlikely to adjust while building sites are not in the main branch of the 
-repository. Instead, they are referenced as dependencies that are installed by
-Composer.
+This is a fork of Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
+that work with the Platform's Integrated Composer build process. 
 
 For more information and detailed installation guides, please visit the
 Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-composer
 
+## Documentation
+
+Documentation for this project can be found in the [Project Wiki](https://github.com/cu-uis/cu-starterkit-project/wiki).
+
 ## Contributing
 
-Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-recommended` repository is a mirror that does not
-directly accept pull requests.
+Non-code contributions are welcome in the form of [GitHub Feature Request Issues](https://github.com/cu-uis/cu-starterkit-project/wiki/Feature-Requests). An Adobe XD template is provided to mock up features using existing design componenets and Bootstrap behaviors whenever possible.
 
-Instead, to propose a change, please fork [pantheon-systems/drupal-recommended](https://github.com/pantheon-systems/drupal-recommended)
+Developers can propose changes by forking [cu-uis/cu-starterkit-project](https://github.com/cu-uis/cu-starterkit-project)
 and submit a PR to that repository.
