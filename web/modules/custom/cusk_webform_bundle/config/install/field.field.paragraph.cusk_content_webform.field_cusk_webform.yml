@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cusk_webform
+    - paragraphs.paragraphs_type.cusk_content_webform
+  module:
+    - webform
+_core:
+  default_config_hash: PZHc-8h7cN8LEC0BPYIrWUD_375TwP2yUPD2ade9FGk
+id: paragraph.cusk_content_webform.field_cusk_webform
+field_name: field_cusk_webform
+entity_type: paragraph
+bundle: cusk_content_webform
+label: 'Select an Existing Webform'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

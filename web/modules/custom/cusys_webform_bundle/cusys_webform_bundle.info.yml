@@ -1,9 +1,0 @@
-name: CU Webform Bundle 
-type: module
-description: Defines Webform Paragraph type. Requires manually enabling on Layout Paragraph field of Content Types.
-package: CU Starter Kit
-core_version_requirement: ^9
-
-dependencies:
-  - drupal:cusys_layout_paragraphs
-  - drupal:webform

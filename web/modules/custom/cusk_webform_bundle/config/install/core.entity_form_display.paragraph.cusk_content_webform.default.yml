@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_content_webform.field_cusk_webform
+    - paragraphs.paragraphs_type.cusk_content_webform
+  module:
+    - webform
+_core:
+  default_config_hash: kY-gf-Zyk3PYAIVs_2N-emD_853Lyt2FH5O4CcWPvtA
+id: paragraph.cusk_content_webform.default
+targetEntityType: paragraph
+bundle: cusk_content_webform
+mode: default
+content:
+  field_cusk_webform:
+    type: webform_entity_reference_select
+    weight: 0
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
