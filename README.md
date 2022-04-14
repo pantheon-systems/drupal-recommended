@@ -1,4 +1,4 @@
-[![PHP Composer](https://github.com/cu-uis/cu-starterkit-project/actions/workflows/php.yml/badge.svg)](https://github.com/cu-uis/cu-starterkit-project/actions/workflows/php.yml)
+[![PHP Composer](https://github.com/cu-uis/cu-starterkit-project/workflows/ComposerBuildCheck/badge.svg)](https://github.com/cu-uis/cu-starterkit-project/actions/workflows/php.yml)
 
 # Composer-enabled Drupal template
 
