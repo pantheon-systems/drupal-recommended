@@ -6,3 +6,4 @@
  */
 
 
+require_once __DIR__ . '/includes/cusk_layout_paragraphs.theme.inc';

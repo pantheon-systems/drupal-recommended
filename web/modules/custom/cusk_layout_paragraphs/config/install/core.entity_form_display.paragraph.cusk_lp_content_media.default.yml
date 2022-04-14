@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_caption
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_caption_alignment
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_media
+    - paragraphs.paragraphs_type.cusk_lp_content_media
+  module:
+    - media_library
+_core:
+  default_config_hash: K2D8SpU4oVlnuFxm1iie2UGoOnYvlaHk1eiwOg_YykE
+id: paragraph.cusk_lp_content_media.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_media
+mode: default
+content:
+  field_cusk_lp_caption:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cusk_lp_caption_alignment:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cusk_lp_media:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

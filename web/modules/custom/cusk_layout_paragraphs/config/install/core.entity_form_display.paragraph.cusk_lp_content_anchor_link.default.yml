@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_anchor_link.field_cusk_lp_anchor
+    - paragraphs.paragraphs_type.cusk_lp_content_anchor_link
+_core:
+  default_config_hash: ct1ybDCJg3WqEBic7uEvZdNmQT6TwjKhTd1AopjNfVQ
+id: paragraph.cusk_lp_content_anchor_link.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_anchor_link
+mode: default
+content:
+  field_cusk_lp_anchor:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

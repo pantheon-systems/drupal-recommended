@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.cusk_lp_content_wysiwyg
   module:
     - text
+_core:
+  default_config_hash: qUKtXqLTxZrYiQASqNThSrQcUfFW_Ii8XKil_Npncb0
 id: paragraph.cusk_lp_content_wysiwyg.default
 targetEntityType: paragraph
 bundle: cusk_lp_content_wysiwyg

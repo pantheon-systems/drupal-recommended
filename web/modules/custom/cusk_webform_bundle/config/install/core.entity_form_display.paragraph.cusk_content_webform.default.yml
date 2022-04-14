@@ -7,7 +7,7 @@ dependencies:
   module:
     - webform
 _core:
-  default_config_hash: kY-gf-Zyk3PYAIVs_2N-emD_853Lyt2FH5O4CcWPvtA
+  default_config_hash: i27sJPGUA0DVdC0s7fDYs1NyK7YpnmiI70HpmWKMNtw
 id: paragraph.cusk_content_webform.default
 targetEntityType: paragraph
 bundle: cusk_content_webform
@@ -21,6 +21,12 @@ content:
       default_data: true
       webforms: {  }
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  status: true

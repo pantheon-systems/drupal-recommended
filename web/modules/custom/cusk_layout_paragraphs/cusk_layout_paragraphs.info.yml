@@ -11,3 +11,4 @@ dependencies:
   - drupal:cusk_media_bundle
   - drupal:viewsreference
   - drupal:field_permissions
+  - drupal:field_group

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cusk_lp_padding_top_bottom
+    - paragraphs.paragraphs_type.cusk_lp_content_horizontal_rule
+  module:
+    - options
+id: paragraph.cusk_lp_content_horizontal_rule.field_cusk_lp_padding_top_bottom
+field_name: field_cusk_lp_padding_top_bottom
+entity_type: paragraph
+bundle: cusk_lp_content_horizontal_rule
+label: 'Padding: Top & Bottom'
+description: 'Set padding for top and bottom'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

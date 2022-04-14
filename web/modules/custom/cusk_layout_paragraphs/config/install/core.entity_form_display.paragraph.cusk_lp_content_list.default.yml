@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cusk_lp_content_list
+id: paragraph.cusk_lp_content_list.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_list
+mode: default
+content:
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
