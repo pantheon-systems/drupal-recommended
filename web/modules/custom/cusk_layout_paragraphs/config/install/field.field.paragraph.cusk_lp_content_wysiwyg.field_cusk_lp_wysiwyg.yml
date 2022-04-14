@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cusk_lp_wysiwyg
+    - paragraphs.paragraphs_type.cusk_lp_content_wysiwyg
+  module:
+    - text
+id: paragraph.cusk_lp_content_wysiwyg.field_cusk_lp_wysiwyg
+field_name: field_cusk_lp_wysiwyg
+entity_type: paragraph
+bundle: cusk_lp_content_wysiwyg
+label: WYSIWYG
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

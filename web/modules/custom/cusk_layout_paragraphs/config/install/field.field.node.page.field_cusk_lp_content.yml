@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cusk_lp_content
+    - node.type.page
+    - paragraphs.paragraphs_type.cusk_lp_content_wysiwyg
+    - paragraphs.paragraphs_type.cusk_lp_layout
+    - paragraphs.paragraphs_type.cusk_lp_view_reference
+  module:
+    - entity_reference_revisions
+id: node.page.field_cusk_lp_content
+field_name: field_cusk_lp_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cusk_lp_layout: cusk_lp_layout
+      cusk_lp_content_wysiwyg: cusk_lp_content_wysiwyg
+      cusk_lp_view_reference: cusk_lp_view_reference
+    negate: 0
+    target_bundles_drag_drop:
+      cusk_lp_content_wysiwyg:
+        weight: 3
+        enabled: true
+      cusk_lp_layout:
+        weight: 2
+        enabled: true
+      cusk_lp_view_reference:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

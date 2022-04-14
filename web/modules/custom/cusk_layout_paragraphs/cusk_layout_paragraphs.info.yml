@@ -1,0 +1,13 @@
+name: CU Layout Paragraphs
+type: module
+description: Adds common Layout Paragraphs to basic page content type
+package: CU Starter Kit
+core_version_requirement: ^9
+
+dependencies:
+  - drupal:layout_paragraphs
+  - drupal:layout_paragraphs_library
+  - drupal:layout_paragraphs_permissions
+  - drupal:cusk_media_bundle
+  - drupal:viewsreference
+  - drupal:field_permissions

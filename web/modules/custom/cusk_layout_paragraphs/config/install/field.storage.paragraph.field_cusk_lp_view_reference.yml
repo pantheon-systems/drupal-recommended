@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - views
+    - viewsreference
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_cusk_lp_view_reference
+field_name: field_cusk_lp_view_reference
+entity_type: paragraph
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

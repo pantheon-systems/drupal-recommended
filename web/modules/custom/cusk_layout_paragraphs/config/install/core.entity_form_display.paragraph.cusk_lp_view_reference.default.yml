@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_view_reference.field_cusk_lp_view_reference
+    - paragraphs.paragraphs_type.cusk_lp_view_reference
+  module:
+    - viewsreference
+id: paragraph.cusk_lp_view_reference.default
+targetEntityType: paragraph
+bundle: cusk_lp_view_reference
+mode: default
+content:
+  field_cusk_lp_view_reference:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
