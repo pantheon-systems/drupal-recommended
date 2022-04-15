@@ -13,19 +13,25 @@ function cusk_layout_paragraphs_theme() {
     'paragraph__cusk_lp_content_anchor_link' => [
       'base hook' => 'paragraph',
     ],
+    'paragraph__cusk_lp_content_horizontal_rule' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__cusk_lp_content_media' => [
+      'base hook' => 'paragraph',
+    ],
   ];
 }
 
 /**
  * Implements template_preprocess_HOOK()
  */
-function _paragraph__cusk_lp_content_anchor_link(&$variables) {
+function template_preprocess_paragraph__cusk_lp_content_anchor_link(&$variables) {
 }
 
 /**
  * Implements template_preprocess_HOOK()
  */
-function _paragraph__cusk_lp_content_horizontal_rule(&$variables) {
+function template_preprocess_paragraph__cusk_lp_content_horizontal_rule(&$variables) {
   $paragraph = $variables['elements']['#paragraph'];
   $variables['border_color'] = $paragraph->hasField('field_cusk_lp_border_color') ? $paragraph->get('field_cusk_lp_border_color')->value : '';
   $variables['padding_tb'] = $paragraph->hasField('field_cusk_lp_padding_top_bottom') ? $paragraph->get('field_cusk_lp_padding_top_bottom')->value : '';
@@ -34,7 +40,7 @@ function _paragraph__cusk_lp_content_horizontal_rule(&$variables) {
 /**
  * Implements template_preprocess_HOOK()
  */
-function _paragraph__cusk_lp_content_media(&$variables) {
+function template_preprocess_paragraph__cusk_lp_content_media(&$variables) {
   $paragraph = $variables['elements']['#paragraph'];
   $variables['is_figure'] = ($paragraph->hasField('field_cusk_lp_caption') && $paragraph->get('field_cusk_lp_caption')->value) ? true : false;
   $variables['caption_align'] = $paragraph->hasField('field_cusk_lp_caption_alignment') ? $paragraph->get('field_cusk_lp_caption_alignment')->value : '';
