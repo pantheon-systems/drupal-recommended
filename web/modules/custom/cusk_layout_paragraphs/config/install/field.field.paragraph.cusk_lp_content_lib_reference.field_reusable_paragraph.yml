@@ -1,0 +1,26 @@
+uuid: add2712c-74b5-4bae-bd7c-a4686fef8b1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reusable_paragraph
+    - paragraphs.paragraphs_type.cusk_lp_content_lib_reference
+id: paragraph.cusk_lp_content_lib_reference.field_reusable_paragraph
+field_name: field_reusable_paragraph
+entity_type: paragraph
+bundle: cusk_lp_content_lib_reference
+label: 'Library Item'
+description: 'Reusable paragraph'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraphs_library_item'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

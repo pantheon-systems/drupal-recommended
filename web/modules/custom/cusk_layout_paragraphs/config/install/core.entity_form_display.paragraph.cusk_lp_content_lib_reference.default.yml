@@ -1,0 +1,25 @@
+uuid: ee9f2ac8-d7de-449b-9171-d7fdb162058c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_lib_reference.field_reusable_paragraph
+    - paragraphs.paragraphs_type.cusk_lp_content_lib_reference
+id: paragraph.cusk_lp_content_lib_reference.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_lib_reference
+mode: default
+content:
+  field_reusable_paragraph:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

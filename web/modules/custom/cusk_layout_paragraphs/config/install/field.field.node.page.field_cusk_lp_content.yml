@@ -1,3 +1,4 @@
+uuid: ad4cf297-886b-475e-8526-edf833fe35b0
 langcode: en
 status: true
 dependencies:
@@ -6,19 +7,20 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.cusk_lp_content_anchor_link
     - paragraphs.paragraphs_type.cusk_lp_content_horizontal_rule
+    - paragraphs.paragraphs_type.cusk_lp_content_lib_reference
     - paragraphs.paragraphs_type.cusk_lp_content_wysiwyg
     - paragraphs.paragraphs_type.cusk_lp_layout
     - paragraphs.paragraphs_type.cusk_lp_view_reference
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: UhkUvB9ck9kHdmOlV6fqckfHk1LAns02kWUOfY2-s7E
+  default_config_hash: 4f-VA2gjoqJj75woXsv0opsTMf-cRXGakF9N77qSI9I
 id: node.page.field_cusk_lp_content
 field_name: field_cusk_lp_content
 entity_type: node
 bundle: page
 label: Content
-description: ''
+description: 'Page content with Layout Paragraphs.'
 required: false
 translatable: false
 default_value: {  }
@@ -31,6 +33,7 @@ settings:
       cusk_lp_content_anchor_link: cusk_lp_content_anchor_link
       cusk_lp_content_horizontal_rule: cusk_lp_content_horizontal_rule
       cusk_lp_content_wysiwyg: cusk_lp_content_wysiwyg
+      cusk_lp_content_lib_reference: cusk_lp_content_lib_reference
       cusk_lp_view_reference: cusk_lp_view_reference
     negate: 0
     target_bundles_drag_drop:
@@ -38,14 +41,14 @@ settings:
         weight: -24
         enabled: true
       cusk_lp_content_card:
-        weight: -20
+        weight: -19
         enabled: false
       cusk_lp_content_horizontal_rule:
         weight: -23
         enabled: true
       cusk_lp_content_lib_reference:
-        weight: -19
-        enabled: false
+        weight: -21
+        enabled: true
       cusk_lp_content_list:
         weight: -18
         enabled: false
@@ -65,7 +68,7 @@ settings:
         weight: -25
         enabled: true
       cusk_lp_view_reference:
-        weight: -21
+        weight: -20
         enabled: true
       from_library:
         weight: -14
