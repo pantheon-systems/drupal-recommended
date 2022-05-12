@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_view_reference.field_cusk_lp_view_reference
+    - paragraphs.paragraphs_type.cusk_lp_view_reference
+  module:
+    - viewsreference
+_core:
+  default_config_hash: MM4PFcRBqElbZpPG-aPGtoFlwyQLR02ytSpBo5f_3bQ
+id: paragraph.cusk_lp_view_reference.default
+targetEntityType: paragraph
+bundle: cusk_lp_view_reference
+mode: default
+content:
+  field_cusk_lp_view_reference:
+    type: viewsreference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

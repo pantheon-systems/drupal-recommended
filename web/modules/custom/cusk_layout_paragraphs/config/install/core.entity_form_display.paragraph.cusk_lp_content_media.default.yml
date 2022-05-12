@@ -1,0 +1,99 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_caption
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_caption_alignment
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_media
+    - paragraphs.paragraphs_type.cusk_lp_content_media
+  module:
+    - field_group
+    - media_library
+third_party_settings:
+  field_group:
+    group_tab_container:
+      children:
+        - group_media
+        - group_figure
+      label: 'Tab Container'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_media:
+      children:
+        - field_cusk_lp_media
+      label: Media
+      region: content
+      parent_name: group_tab_container
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_figure:
+      children:
+        - field_cusk_lp_caption
+        - field_cusk_lp_caption_alignment
+      label: Figure
+      region: content
+      parent_name: group_tab_container
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.cusk_lp_content_media.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_media
+mode: default
+content:
+  field_cusk_lp_caption:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cusk_lp_caption_alignment:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cusk_lp_media:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types:
+        - image
+        - document
+        - video
+        - audio
+        - remote_video
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

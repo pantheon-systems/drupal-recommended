@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * Contains cusk_layout_paragraphs.module.
+ */
+
+
+require_once __DIR__ . '/includes/cusk_layout_paragraphs.theme.inc';

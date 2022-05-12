@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: breadcrumb
+label: Breadcrumb
+pattern: "<div class=\"bd-content\">\r\n<h2 id=\"example\">Example <a href=\"#block-cusys-barrio-content\" title=\"back to top\"><i class=\"fas fa-level-up-alt\"></i></a></h2>\r\n<p>Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.</p>\r\n<div class=\"bd-example\">\r\n<nav aria-label=\"breadcrumb\">\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">Home</li>\r\n  </ol>\r\n</nav>\r\n\r\n<nav aria-label=\"breadcrumb\">\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">Library</li>\r\n  </ol>\r\n</nav>\r\n\r\n<nav aria-label=\"breadcrumb\">\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n    <li class=\"breadcrumb-item\"><a href=\"#\">Library</a></li>\r\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">Data</li>\r\n  </ol>\r\n</nav>\r\n</div>\r\n<h2 id=\"dividers\">Dividers</h2>\r\n<p>Dividers are automatically added in CSS through <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/::before\"><code>::before</code></a> and <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/content\"><code>content</code></a>. They can be changed by modifying a local CSS custom property <code>--bs-breadcrumb-divider</code>, if needed.</p>\r\n<div class=\"bd-example\">\r\n<nav style=\"--bs-breadcrumb-divider: '>';\" aria-label=\"breadcrumb\">\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">Library</li>\r\n  </ol>\r\n</nav>\r\n</div>\r\n</div>"
+weight: -2
+description:
+  value: "<p>Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.</p>\r\n"
+  format: full_html

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_wysiwyg.field_cusk_lp_wysiwyg
+    - paragraphs.paragraphs_type.cusk_lp_content_wysiwyg
+  module:
+    - text
+id: paragraph.cusk_lp_content_wysiwyg.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_wysiwyg
+mode: default
+content:
+  field_cusk_lp_wysiwyg:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

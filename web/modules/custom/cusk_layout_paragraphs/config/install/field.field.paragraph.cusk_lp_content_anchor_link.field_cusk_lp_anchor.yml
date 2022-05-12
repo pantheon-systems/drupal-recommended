@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cusk_lp_anchor
+    - paragraphs.paragraphs_type.cusk_lp_content_anchor_link
+id: paragraph.cusk_lp_content_anchor_link.field_cusk_lp_anchor
+field_name: field_cusk_lp_anchor
+entity_type: paragraph
+bundle: cusk_lp_content_anchor_link
+label: Name
+description: 'Friendly name that would be used in a Table of Contents.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

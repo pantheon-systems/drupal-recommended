@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_caption
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_caption_alignment
+    - field.field.paragraph.cusk_lp_content_media.field_cusk_lp_media
+    - paragraphs.paragraphs_type.cusk_lp_content_media
+id: paragraph.cusk_lp_content_media.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_media
+mode: default
+content:
+  field_cusk_lp_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cusk_lp_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_cusk_lp_caption_alignment: true

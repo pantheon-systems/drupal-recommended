@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cusk_lp_border_color
+    - paragraphs.paragraphs_type.cusk_lp_content_horizontal_rule
+  module:
+    - options
+id: paragraph.cusk_lp_content_horizontal_rule.field_cusk_lp_border_color
+field_name: field_cusk_lp_border_color
+entity_type: paragraph
+bundle: cusk_lp_content_horizontal_rule
+label: 'Border Color'
+description: 'Set the Horizontal Rule color.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

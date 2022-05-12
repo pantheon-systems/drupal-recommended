@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_lp_content_horizontal_rule.field_cusk_lp_border_color
+    - field.field.paragraph.cusk_lp_content_horizontal_rule.field_cusk_lp_padding_top_bottom
+    - paragraphs.paragraphs_type.cusk_lp_content_horizontal_rule
+id: paragraph.cusk_lp_content_horizontal_rule.default
+targetEntityType: paragraph
+bundle: cusk_lp_content_horizontal_rule
+mode: default
+content: {  }
+hidden:
+  field_cusk_lp_border_color: true
+  field_cusk_lp_padding_top_bottom: true

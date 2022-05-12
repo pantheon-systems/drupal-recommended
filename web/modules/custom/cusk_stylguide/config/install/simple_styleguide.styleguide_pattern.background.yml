@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: background
+label: Background
+pattern: "<div class=\"bd-content\">\r\n<h2 id=\"example\">Example <a href=\"#block-cusys-barrio-content\" title=\"back to top\"><i class=\"fas fa-level-up-alt\"></i></a></h2>\r\n<div class=\"bd-example\">\r\n\r\n<div class=\"p-3 mb-2 bg-primary text-white\">.bg-primary</div>\r\n<div class=\"p-3 mb-2 bg-secondary text-white\">.bg-secondary</div>\r\n<div class=\"p-3 mb-2 bg-success text-white\">.bg-success</div>\r\n<div class=\"p-3 mb-2 bg-danger text-white\">.bg-danger</div>\r\n<div class=\"p-3 mb-2 bg-warning text-dark\">.bg-warning</div>\r\n<div class=\"p-3 mb-2 bg-info text-dark\">.bg-info</div>\r\n<div class=\"p-3 mb-2 bg-light text-dark\">.bg-light</div>\r\n<div class=\"p-3 mb-2 bg-dark text-white\">.bg-dark</div>\r\n<div class=\"p-3 mb-2 bg-body text-dark\">.bg-body</div>\r\n<div class=\"p-3 mb-2 bg-white text-dark\">.bg-white</div>\r\n<div class=\"p-3 mb-2 bg-transparent text-dark\">.bg-transparent</div>\r\n</div>\r\n<h2 id=\"background-gradient\">Background gradient</h2>\r\n<div class=\"p-3 mb-2 bg-primary bg-gradient text-white\">.bg-primary.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-secondary bg-gradient text-white\">.bg-secondary.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-success bg-gradient text-white\">.bg-success.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-danger bg-gradient text-white\">.bg-danger.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-warning bg-gradient text-dark\">.bg-warning.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-info bg-gradient text-dark\">.bg-info.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-light bg-gradient text-dark\">.bg-light.bg-gradient</div>\r\n<div class=\"p-3 mb-2 bg-dark bg-gradient text-white\">.bg-dark.bg-gradient</div>\r\n</div>"
+weight: -16
+description:
+  value: "<p>Convey meaning through&nbsp;<code>background-color</code>&nbsp;and add decoration with gradients.</p>\r\n"
+  format: full_html

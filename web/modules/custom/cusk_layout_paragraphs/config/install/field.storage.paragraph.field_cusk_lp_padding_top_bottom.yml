@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_cusk_lp_padding_top_bottom
+field_name: field_cusk_lp_padding_top_bottom
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: py-0
+      label: '0'
+    -
+      value: py-1
+      label: '1'
+    -
+      value: py-2
+      label: '2'
+    -
+      value: py-3
+      label: '3'
+    -
+      value: py-4
+      label: '4'
+    -
+      value: py-5
+      label: '5'
+    -
+      value: py-auto
+      label: Auto
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

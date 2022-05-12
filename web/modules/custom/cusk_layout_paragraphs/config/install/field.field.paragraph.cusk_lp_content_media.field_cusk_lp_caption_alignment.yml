@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cusk_lp_caption_alignment
+    - paragraphs.paragraphs_type.cusk_lp_content_media
+  module:
+    - options
+id: paragraph.cusk_lp_content_media.field_cusk_lp_caption_alignment
+field_name: field_cusk_lp_caption_alignment
+entity_type: paragraph
+bundle: cusk_lp_content_media
+label: 'Caption Alignment'
+description: 'Alignment of caption for image(defaults to ''None'' = Left Justified).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: close_button
+label: 'Close button'
+pattern: "<div class=\"bd-content\">\r\n<h2 id=\"example\">Example <a href=\"#block-cusys-barrio-content\" title=\"back to top\"><i class=\"fas fa-level-up-alt\"></i></a></h2>\r\n<p>Provide an option to dismiss or close a component with <code>.btn-close</code>. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default <code>background-image</code>. <strong>Be sure to include text for screen readers</strong>, as we’ve done with <code>aria-label</code>.</p>\r\n<div class=\"bd-example\">\r\n<button type=\"button\" class=\"btn-close\" aria-label=\"Close\"></button>\r\n</div>\r\n<h2 id=\"disabled-state\">Disabled state</h2>\r\n<p>Disabled close buttons change their <code>opacity</code>. We’ve also applied <code>pointer-events: none</code> and <code>user-select: none</code> to preventing hover and active states from triggering.</p>\r\n<div class=\"bd-example\">\r\n<button type=\"button\" class=\"btn-close\" disabled=\"\" aria-label=\"Close\"></button>\r\n</div>\r\n<h2 id=\"white-variant\">White variant</h2>\r\n<p>Change the default <code>.btn-close</code> to be white with the <code>.btn-close-white</code> class. This class uses the <code>filter</code> property to invert the <code>background-image</code>.</p>\r\n<div class=\"bd-example bg-dark\">\r\n<button type=\"button\" class=\"btn-close btn-close-white\" aria-label=\"Close\"></button>\r\n<button type=\"button\" class=\"btn-close btn-close-white\" disabled=\"\" aria-label=\"Close\"></button>\r\n</div>\r\n</div>"
+weight: 3
+description:
+  value: "<p>A generic close button for dismissing content like modals and alerts.</p>\r\n"
+  format: full_html

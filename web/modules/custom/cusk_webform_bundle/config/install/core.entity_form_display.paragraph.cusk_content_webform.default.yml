@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cusk_content_webform.field_cusk_webform
+    - paragraphs.paragraphs_type.cusk_content_webform
+  module:
+    - webform
+_core:
+  default_config_hash: i27sJPGUA0DVdC0s7fDYs1NyK7YpnmiI70HpmWKMNtw
+id: paragraph.cusk_content_webform.default
+targetEntityType: paragraph
+bundle: cusk_content_webform
+mode: default
+content:
+  field_cusk_webform:
+    type: webform_entity_reference_select
+    weight: 0
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
