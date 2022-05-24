@@ -26,19 +26,6 @@
                     "reference": "8ecf8c3757cd5f4c2e3dde5ce05bdbb5d2f865e1"
                 }
             }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "cu-uis/cu_base",
-                "type": "drupal-custom-theme",
-                "version": "1.0.0",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/cu-uis/cu_base.git",
-                    "reference": "main"
-                }
-            }
         }
     ],
     "require": {
