@@ -5,16 +5,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "license": "MIT",
-    "repositories": [
-        {
+    "repositories": {
+        "composer": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        {
+        "upstream-configuration": {
             "type": "path",
             "url": "upstream-configuration"
         },
-        {
+        "drupal/taxonomy_revision_ui": {
             "type": "package",
             "package": {
                 "name": "drupal/taxonomy_revision_ui",
@@ -27,7 +27,7 @@
                 }
             }
         },
-        {
+        "cu-uis/cu_base": {
             "type": "package",
             "package": {
                 "name": "cu-uis/cu_base",
@@ -40,7 +40,7 @@
                 }
             }
         }
-    ],
+    },
     "require": {
         "composer/installers": "^1.9",
         "cu-starterkit/upstream-configuration": "^1",
