@@ -62,7 +62,7 @@
         "drupal/views_autosubmit": "^1.4",
         "drupal/sendgrid_integration": "^1.7",
         "drupal/swiftmailer": "^2.2",
-        "drupal/pantheon_advanced_page_cache": "^1.2",
+        "drupal/pantheon_advanced_page_cache": "^2.0",
         "drupal/webp": "^1.0@beta",
         "drupal/entity_usage": "^2.0@beta",
         "cu-uis/cu_base": "^1.0"
