@@ -1,5 +1,0 @@
-# Schema for the configuration files of the Bootstrap Barrio Subtheme.
-
-cusys_barrio.settings:
-  type: theme_settings
-  label: 'CU System Subtheme settings'
