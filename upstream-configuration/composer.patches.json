@@ -1,3 +1,4 @@
 "drupal/structure_sync": {
-    "D9 - getVocabularyId (undefined method)": "https://www.drupal.org/files/issues/2020-11-05/3180878-undefined-method-getVocabularyId-1.patch"
+    "D9 - getVocabularyId (undefined method)": "https://www.drupal.org/files/issues/2020-11-05/3180878-undefined-method-getVocabularyId-1.patch",
+    "D9 - Add support for Recipes": "https://git.drupalcode.org/project/distributions_recipes/-/raw/patch/recipe.patch"
 }
